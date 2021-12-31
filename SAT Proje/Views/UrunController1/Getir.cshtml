@@ -1,0 +1,55 @@
+﻿@model SAT_Proje.Models.Urun
+@{
+    ViewData["Title"] = "Getir";
+    Layout = "~/Admin/Index.cshtml";
+}
+
+
+@using (Html.BeginForm("Güncelle", "UrunController1", FormMethod.Post))
+{
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">UrunId</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunId, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">UrunAdı</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunAdı, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">Ürün Adet</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunAdet, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">Ürün Barkod</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunBarkod, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">Ürün Fiyat</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunFıyat, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">Ürün Acıklama</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunAcıklama, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-info">Ürün  Güncelle</button>
+
+}
+

@@ -1,0 +1,42 @@
+﻿@model  SAT_Proje.Models.Durum
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Admin/Index.cshtml";
+}
+
+   
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row" style="margin-block:unset">
+                <div class="col-lg-3 col-6" >
+                    <div class="small-box bg-info">
+                        <div class="inner">
+                            <h3>@Model.UrunSayısı</h3>
+
+                            <p>Ürün Sayısı</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <a href="/UrunController1/Index" class="small-box-footer">Daha Fazla Bilgi <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3>@Model.MusterıSayısı<sup style="font-size: 20px"></sup></h3>
+
+                            <p>Müşteri Sayısı</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-users"></i>                        
+                        </div>
+                        <a href="/MusterıController1/Index" class="small-box-footer">Daha Fazla Bilgi<i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+               
+            </div>
+        
+                </section>
+        
+

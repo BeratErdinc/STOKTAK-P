@@ -1,0 +1,40 @@
+﻿@using SAT_Proje.Models
+@model List<Musterı>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Admin/Index.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <td>MüsteriId</td>
+        <th>MüsteriAdıSoyadı</th>
+        <th>MüsteriAcıkAdres</th>
+        <th>MüsteriSehir</th>
+        <th>Siparis Durum</th>
+        <th>Müsteritel</th>
+        <th>Gönderilcek Ürün </th>
+        <th>Delete</th>
+        <th>Update </th>
+
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.MusterıId</td>
+    <td>@x.MusterıAdıSoyadı</td>
+    <td>@x.MusterıAcıkAdres</td>
+    <td>@x.MusterıSehır</td>
+    <td>@x.SıparıDurum</td>
+    <td>@x.Musterıtel</td>
+    <td>@x.urun.UrunAdı</td>
+    <td><a href="/MusterıController1/Sil/@x.MusterıId" class="btn btn-danger">Sil</a></td>
+    <td><a href="/MusterıController1/Düzenle/@x.MusterıId" class="btn btn-success">Güncelle</a></td>
+
+</tr>
+
+    }
+</table>
+

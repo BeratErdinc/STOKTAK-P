@@ -1,0 +1,46 @@
+﻿@model SAT_Proje.Models.Urun
+@{
+    ViewData["Title"] = "YeniUrun";
+    Layout = "~/Admin/Index.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">ÜrünAdı</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunAdı, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">ÜrünBarkod</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunBarkod, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">ÜrünAdet</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunAdet, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">ÜrünFıyat</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunFıyat, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="txt_ad">ÜrünAcıklama</span>
+        </div>
+        @Html.TextBoxFor(x => x.UrunAcıklama, new { @class = "form-control", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-info">Ürün Ekle</button>
+</form>
+
